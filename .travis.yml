@@ -6,10 +6,8 @@ php:
   - '7.0'
 
 before_install:
-  - if [ ! -f $HOME/www/bitrix/modules/main/include/prolog_before.php ]; then
-      wget https://www.1c-bitrix.ru/download/start_encode_php5.tar.gz -O /tmp/start_encode_php5.tar.gz;
-      tar -xf /tmp/start_encode_php5.tar.gz -C $HOME/www;
-    fi
+  - wget https://www.1c-bitrix.ru/download/start_encode_php5.tar.gz -O /tmp/start_encode_php5.tar.gz;
+  - tar -xf /tmp/start_encode_php5.tar.gz -C $HOME/www;
   - mkdir -p $HOME/www/bitrix/components/eustatos/excomp
   - mv -f $TRAVIS_BUILD_DIR/* $HOME/www/bitrix/components/eustatos/excomp
   - cd $HOME/www/bitrix/components/eustatos/excomp
