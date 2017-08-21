@@ -13,15 +13,9 @@ before_install:
   - cd $HOME/www/bitrix/components/eustatos/excomp
   - ls -la
 
-cache:
-  directories:
-  - $HOME/www
-before_cache:
-  - rm -rf $HOME/bitrix/components/eustatos/excomp
-  
 script:
   - composer dump-autoload -o
-  - phpunit --bootstrap=tests/bootstrap.php tests/ClassTest.php
+  - phpunit
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
