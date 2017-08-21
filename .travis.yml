@@ -7,7 +7,6 @@ php:
 
 before_install:
   - sed -i 's/^short_open_tag\ =\ Off/short_open_tag\ =\ On/g' ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  - service php-fpm restart
   - if [ ! -f $HOME/www/bitrix/modules/main/include/prolog_before.php ]; then
       wget https://www.1c-bitrix.ru/download/start_encode_php5.tar.gz -O /tmp/start_encode_php5.tar.gz;
       mkdir -p $HOME/www;
