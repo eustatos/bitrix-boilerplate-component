@@ -1,0 +1,9 @@
+#
+*.swp
+
+#
+tags
+coverage
+phpdoc
+vendor
+composer.phar
