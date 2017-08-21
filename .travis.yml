@@ -6,6 +6,7 @@ php:
   - '7.0'
 
 before_install:
+  - php -i | grep php.ini
   - if [ ! -f $HOME/www/bitrix/modules/main/include/prolog_before.php ]; then
       wget https://www.1c-bitrix.ru/download/start_encode_php5.tar.gz -O /tmp/start_encode_php5.tar.gz;
       mkdir -p $HOME/www;
