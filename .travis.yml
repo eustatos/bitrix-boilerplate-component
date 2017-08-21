@@ -21,7 +21,7 @@ before_cache:
   
 script:
   - composer dump-autoload -o
-  - phpunit
+  - phpunit --bootstrap=tests/bootstrap.php tests/ClassTest.php
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
