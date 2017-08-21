@@ -1,4 +1,4 @@
-<?php
+<?
    /**
    * User: Rodion Abdurakhimov
    * Mail: rodion@epages.in.ua
@@ -10,7 +10,7 @@
    define("NO_AGENT_CHECK", true);
    $GLOBALS["DBType"] = 'mysql';
    $_SERVER["DOCUMENT_ROOT"] = __DIR__ . '/../../../../..';
-   require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
+   require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php");
    function initBitrixCore()
    {
       // manual saving of DB resource
