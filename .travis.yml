@@ -11,7 +11,7 @@ before_script:
   - tar -xf /tmp/start_encode_php5.tar.gz -C /tmp/www
   - cd /tmp/www
   - mkdir -p bitrix/components/eustatos/excomp
-  - mv $HOME/bitrix-boilerplate-component/* bitrix/components/eustatos/excomp/
+  - mv $HOME/eustatos/bitrix-boilerplate-component/* bitrix/components/eustatos/excomp/
   - cd bitrix/components/eustatos/excomp
   - pwd
 
