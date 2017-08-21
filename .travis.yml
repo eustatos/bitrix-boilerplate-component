@@ -6,20 +6,15 @@ php:
   - '7.0'
 
 before_install:
-  - pwd
-  - ls -la $TRAVIS_BUILD_DIR
   - wget https://www.1c-bitrix.ru/download/start_encode_php5.tar.gz -O /tmp/start_encode_php5.tar.gz
-  - mkdir -p www/bitrix/components/eustatos/excomp
-  - tar -xf /tmp/start_encode_php5.tar.gz -C www
-  - mv build/eustatos/bitrix-boilerplate-component/ www/bitrix/components/eustatos/excomp/
-  - cd www/bitrix/components/eustatos/excomp
+  - tar -xf /tmp/start_encode_php5.tar.gz -C $HOME
   - pwd
 
 cache:
   directories:
-  - /tmp/start_encode_php5
+  - $HOME
 before_cache:
-  - rm -f /tmp/start_encode_php5/bitrix/components/eustatos/excomp
+  - rm -f $HOME/bitrix/components/eustatos/excomp
   
 script:
   - composer dump-autoload -o
