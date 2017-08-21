@@ -19,7 +19,7 @@ cache:
   directories:
   - $HOME/www
 before_cache:
-  - rm -f $HOME/bitrix/components/eustatos/excomp
+  - rm -rf $HOME/bitrix/components/eustatos/excomp
   
 script:
   - composer dump-autoload -o
