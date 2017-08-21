@@ -7,7 +7,7 @@ php:
 
 before_script:
   - wget https://www.1c-bitrix.ru/download/start_encode_php5.tar.gz -O /tmp/start_encode_php5.tar.gz
-   - mkdir -p www/bitrix/components/eustatos/excomp
+  - mkdir -p www/bitrix/components/eustatos/excomp
   - tar -xf /tmp/start_encode_php5.tar.gz -C www
   - mv eustatos/bitrix-boilerplate-component/* www/bitrix/components/eustatos/excomp/
   - cd www/bitrix/components/eustatos/excomp
