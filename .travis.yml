@@ -22,7 +22,8 @@ before_install:
 script:
   - php -i | grep short_open_tag
   - composer dump-autoload -o
-  - php -d display_errors=On phpunit 
+  - composer install
+  - php -d display_errors=On vendor/bin/phpunit 
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
