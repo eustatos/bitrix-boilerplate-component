@@ -1,6 +1,12 @@
 {
-    "require-dev": {
-        "squizlabs/php_codesniffer": "^3.0",
-        "phpunit/phpunit": "^5.7"
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.0",
+      "phpunit/phpunit": "^5.7"
+  },
+    "autoload": {
+      "files": [
+        "tests/bootstrap.php",
+        "class.php"
+      ]
     }
 }

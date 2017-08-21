@@ -1,5 +1,5 @@
 <?php
-   require_once(__DIR__ . '/../class.php');
+   require_once(__DIR__ . '/../vendor/autoload.php');
 
    class ClassTest extends PHPUnit_Framework_TestCase
    {
