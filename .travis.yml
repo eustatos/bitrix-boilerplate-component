@@ -5,7 +5,7 @@ php:
   - '5.6'
   - '7.0'
 
-before_script:
+before_install:
   - wget https://www.1c-bitrix.ru/download/start_encode_php5.tar.gz -O /tmp/start_encode_php5.tar.gz
   - mkdir -p www/bitrix/components/eustatos/excomp
   - tar -xf /tmp/start_encode_php5.tar.gz -C www
