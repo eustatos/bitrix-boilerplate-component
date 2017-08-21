@@ -10,12 +10,12 @@
          colors="true"
          verbose="true">
     <testsuite>
-        <directory suffix="Test.php">tests</directory>
+        <file>tests/ClassTest.php</file>
     </testsuite>
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src</directory>
+            <file>class.php</file>
         </whitelist>
     </filter>
 </phpunit>
