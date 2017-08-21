@@ -23,7 +23,7 @@ script:
   - php -i | grep short_open_tag
   - composer dump-autoload -o
   - composer install
-  - php -d display_errors=On vendor/bin/phpunit 
+  - php -d display_errors=On -d short_open_tag=On vendor/bin/phpunit 
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
