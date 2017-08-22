@@ -16,15 +16,12 @@ before_install:
   - mkdir -p $HOME/www/bitrix/components/eustatos/excomp
   - mv -f $TRAVIS_BUILD_DIR/* $HOME/www/bitrix/components/eustatos/excomp
   - cd $HOME/www/bitrix/components/eustatos/excomp
-  - ls -la
 
 before_script: phpenv config-add bitrixenv.ini
 
 script:
   - php -i | grep short_open_tag
   - composer dump-autoload -o
-  - composer install
-  - phpunit
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
