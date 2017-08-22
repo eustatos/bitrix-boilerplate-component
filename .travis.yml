@@ -6,7 +6,6 @@ php:
   - '7.0'
 
 before_install:
-  - sed -i 's/^short_open_tag\ =\ Off/short_open_tag\ =\ On/g' ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - if [ ! -f $HOME/www/bitrix/modules/main/include/prolog_before.php ]; then
       wget https://www.1c-bitrix.ru/download/start_encode_php5.tar.gz -O /tmp/start_encode_php5.tar.gz;
       mkdir -p $HOME/www;
@@ -19,11 +18,13 @@ before_install:
   - cd $HOME/www/bitrix/components/eustatos/excomp
   - ls -la
 
+before_script: phpenv config-add bitrixenv.ini
+
 script:
   - php -i | grep short_open_tag
   - composer dump-autoload -o
   - composer install
-  - php -d display_errors=On -d short_open_tag=On vendor/bin/phpunit 
+  - phpunit
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
